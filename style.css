@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form{
+    padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 5px;
+}
+.grid-container img {
+  width: 100%;
+}
+.grid-container>div{
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    padding: 20px;
+}
+/* стили для элемента loader */
+
+.loader {
+  width: 70px;
+  height: 70px;
+  border: 10px solid #ffffff;
+  border-bottom-color: #ff7300;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 0.7s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+}
+
+.none {
+  display: none;
+}
+
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
